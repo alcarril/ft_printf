@@ -5,9 +5,15 @@ ft_printf
 	<strong><span style="font-size: 1.25em;">My implementation of the printf function from scratch</span></strong>
 	<br />
 	<br />
-	<img src="https://img.shields.io/badge/42-Project-black" alt="42" />
-	<img src="https://img.shields.io/badge/C-Language-blue" alt="C" />
-	<img src="https://img.shields.io/badge/GNU-Makefile-green" alt="GNU Makefile" />
+	<a href="https://42.fr/">
+		<img src="https://img.shields.io/badge/42-Project-black" alt="42" />
+	</a>
+	<a href="https://en.cppreference.com/w/c">
+		<img src="https://img.shields.io/badge/C-Language-blue" alt="C" />
+	</a>
+	<a href="https://www.gnu.org/software/make/">
+		<img src="https://img.shields.io/badge/GNU-Makefile-green" alt="GNU Makefile" />
+	</a>
 </div>
 
 ## Overview
@@ -78,6 +84,22 @@ You can also run the included tests in the `test` folder:
 ```bash
 make test
 ```
+
+## ℹ️ Resources
+### Numeric Bases and Base Conversion
+- [Video: Hexadecimal system](https://www.youtube.com/watch?v=WGN4NWICTpQ)
+- [Video: How computers count](https://www.youtube.com/watch?v=X74MyYIUEdk)
+- [Video: What a base is (math)](https://www.youtube.com/watch?v=Y32SbYUfevw)
+- [Video: Base conversion](https://www.youtube.com/watch?v=PH5-goOj-rE&feature=youtu.be)
+
+### Variadic Functions
+- [Notion notes: Funciones variadicas](https://broken-snowdrop-f03.notion.site/Funciones-vari-dicas-142b80eb3d88802aa3d1d2f465d14a16)
+- [Video: Variadic functions in C](https://www.youtube.com/watch?v=7Sph8JlRo0g)
+
+### printf
+- [IBM printf reference](https://www.ibm.com/docs/es/i/7.5.0?topic=functions-printf-print-formatted-characters)
+- `man printf` (RTFM)
+- [UC3M notes on printf (ES)](https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html)
 
 ## 👨‍💻 Author
 [Alejandro Carrillo (alcarril)](https://github.com/alcarril)
