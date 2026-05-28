@@ -10,7 +10,7 @@ ft_printf
 	<img src="https://img.shields.io/badge/GNU-Makefile-green" alt="GNU Makefile" />
 </div>
 
-## 📌 Overview
+## Overview
 This project is my third 42 school assignment to recreate the `printf` function and some of its parsing and expansion (formatting) cases. To build it, I use variadic functions, my own library from the Libft project, and the standard C functions `malloc`, `free`, and `write`.
 
 ## Key Features
@@ -21,14 +21,17 @@ This project is my third 42 school assignment to recreate the `printf` function 
 
 ## Formatted Cases
 We replicate the formatting cases used by `printf`:
-- `c` for a single character.
-- `s` for strings.
-- `d` and `i` for signed decimal integers.
-- `u` for unsigned integers.
-- `p` for memory addresses (pointers).
-- `x` for hexadecimal (lowercase).
-- `X` for hexadecimal (uppercase).
-- `%%` for a literal percent sign.
+
+| Specifier | Description |
+| --- | --- |
+| `c` | Single character |
+| `s` | String |
+| `d`, `i` | Signed decimal integer |
+| `u` | Unsigned integer |
+| `p` | Memory address (pointer) |
+| `x` | Hexadecimal (lowercase) |
+| `X` | Hexadecimal (uppercase) |
+| `%%` | Literal percent sign |
 
 ## 🛠️ Requirements
 Install required packages (Ubuntu/Debian):
@@ -39,8 +42,6 @@ sudo apt install -y gcc
 ```
 
 Libft is included in this project (my own library), no extra install needed.
-
-Note: On other Linux or Unix-like systems, install GCC/Clang and GNU Make with your package manager.
 
 ## 🧱 Build
 ```bash
@@ -77,3 +78,6 @@ You can also run the included tests in the `test` folder:
 ```bash
 make test
 ```
+
+## 👨‍💻 Author
+[Alejandro Carrillo (alcarril)](https://github.com/alcarril)
