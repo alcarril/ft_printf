@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   testhex.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/24 23:15:26 by alex              #+#    #+#             */
-/*   Updated: 2024/11/24 23:25:57 by alex             ###   ########.fr       */
+/*   Created: 2024/10/02 13:20:48 by alex              #+#    #+#             */
+/*   Updated: 2025/01/09 19:37:26 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    unsigned int i;
-    int len;
+	unsigned int	i;
 
-    i = 0;
-    while (i < UINT_MAX)
-    {
-        len = ft_printf("hex: %x\n", i);
-        printf("ft len: %i\n", len);
-        len = printf("hex: %x\n", i);
-        printf("len: %i\n\n", len);
-    }
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

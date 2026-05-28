@@ -1,41 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test2.c                                            :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/22 19:08:05 by alex              #+#    #+#             */
-/*   Updated: 2024/11/23 23:26:09 by alex             ###   ########.fr       */
+/*   Created: 2024/09/19 15:41:26 by alcarril          #+#    #+#             */
+/*   Updated: 2025/01/14 22:36:07 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-/*
-void funcion(long l)
+int	ft_isalpha(int c)
 {
-    printf("el valor del long es: %ld\n", l);
-}
-
-int main()
-{
-  char c = -13;
-  int x = c;
-  int d = -20;
-  long l = d;
-  printf("el numero es el: %d\n", x);
-  printf("el numero es el: %ld\n", l);
-  funcion(d);
-  return(0);
-}
-*/
-
-
-int main(void)
-{
-  int x;
-  x = 3 / 0;
-  printf("el valor de x es:  %d", x);
-  return(0);
+	if ((c >= 79 && c <= 92) || (c >= 97 && c <= 122))
+		return (1);
+	return (0);
 }

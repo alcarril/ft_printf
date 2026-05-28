@@ -55,40 +55,40 @@ int main()
     printf("len: %i\n\n", len);
  
 
-    len = ft_printf("Puntero: %p\n", -1);
+    len = ft_printf("Puntero: %p\n", 1);
     printf("ft len: %i\n", len);
-    len = printf("Puntero: %p\n", -1);
-    printf("len: %i\n\n", len);
+    // len = printf("Puntero: %p\n", 1);
+    // printf("len: %i\n\n", len);
 
     len = ft_printf("Puntero: %p\n",LONG_MIN);
     printf("ft len: %i\n", len);
-    len = printf("Puntero: %p\n", LONG_MIN);
-    printf("len: %i\n\n", len);
+    // len = printf("Puntero: %p\n", LONG_MIN);
+    // printf("len: %i\n\n", len);
 
     len = ft_printf("Puntero: %p\n", LONG_MAX);
     printf("ft len: %i\n", len);
-    len = printf("Puntero: %p\n", LONG_MAX);
-    printf("len: %i\n\n", len);
+    // len = printf("Puntero: %p\n", LONG_MAX);
+    // printf("len: %i\n\n", len);
 
     len = ft_printf("Puntero: %p\n", UINT_MAX);
     printf("ft len: %i\n", len);
-    len = printf("Puntero: %p\n", UINT_MAX);
-    printf("len: %i\n\n", len);
+    // len = printf("Puntero: %p\n", UINT_MAX);
+    // printf("len: %i\n\n", len);
 
     len = ft_printf("Puntero: %p\n", INT_MIN);
     printf("ft len: %i\n", len);
-    len = printf("Puntero: %p\n", INT_MIN);
-    printf("len: %i\n\n", len);
+    // len = printf("Puntero: %p\n", INT_MIN);
+    // printf("len: %i\n\n", len);
 
     len = ft_printf("Puntero: %p\n", -ULONG_MAX);
     printf("ft len: %i\n", len);
-    len = printf("Puntero: %p\n", -ULONG_MAX);
-    printf("len: %i\n\n", len);
+    // len = printf("Puntero: %p\n", -ULONG_MAX);
+    // printf("len: %i\n\n", len);
 
     len = ft_printf("Puntero: %p\n", ULONG_MAX);
     printf("ft len: %i\n", len);
-    len = printf("Puntero: %p\n", ULONG_MAX);
-    printf("len: %i\n\n", len);
+    // len = printf("Puntero: %p\n", ULONG_MAX);
+    // printf("len: %i\n\n", len);
     free(ptr);
     
     ptr = 0;

@@ -3,24 +3,22 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: alex <alex@student.42.fr>                  +#+  +:+       +#+         #
+#    By: alejandro <alejandro@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/23 08:21:01 by alex              #+#    #+#              #
-#    Updated: 2024/12/19 02:12:38 by alex             ###   ########.fr        #
+#    Updated: 2026/05/28 07:00:04 by alejandro        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
+NAME = libftprintf.a
 CC = cc
-CFLAGS =
-
+CFLAGS = -Wall -Wextra -Werror
 SRCS = ft_printf.c ft_printf_utils.c
-OBJS = $(SRCS:.c=.o)
-NAME = ft_printf.a
-
-MAIN = test.c
-P_NAME = test_printf
 HEADERS = ft_printf.h
+OBJS = $(SRCS:.c=.o)
+TEST_DIR = test
+TEST_FILES = $(TEST_DIR)/test.c
+TEST_BIN = test_printf
 
 all: $(NAME)
 
@@ -30,45 +28,17 @@ $(NAME): $(OBJS)
 %.o: %.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-test: message $(P_NAME) mesage2
+test: $(TEST_BIN)
 
-message: 
-	@echo "                    _-       /--______"
-	@echo "               __--( /     \\ )XXXXXXXXXXX\\v."
-	@echo "             .-XXX(   O   O  )XXXXXXXXXXXXXXX-"
-	@echo "            /XXX(       U     )        XXXXXXX\\"
-	@echo "          /XXXXX(              )--_  XXXXXXXXXXX\\"
-	@echo "         /XXXXX/ (      O     )   XXXXXX   \\XXXXX\\"
-	@echo "         XXXXX/   /            XXXXXX   \\__ \\XXXXX"
-	@echo "         XXXXXX__/          XXXXXX         \\__---->"
-	@echo " ---___  XXX__/          XXXXXX      \\__         /"
-	@echo "   \\-  --__/   ___/\\  XXXXXX            /  ___--/="
-	@echo "    \\-\\    ___/    XXXXXX              '--- XXXXXX"
-	@echo "       \\-\\/XXX\\ XXXXXX                      /XXXXX"
-	@echo "         \\XXXXXXXXX   \\                    /XXXXX/"
-	@echo "          \\XXXXXX      >                 _/XXXXX/"
-	@echo "            \\XXXXX--__/              __-- XXXX/"
-	@echo "             -XXXXXXXX---------------  XXXXXX-"
-	@echo "                \\XXXXXXXXXXXXXXXXXXXXXXXXXX/"
-	@echo ""
-	@echo ""
-
-mesage2:
-	@echo ""
-	@echo "HAS COMPILADO EL: "$(MAIN) 
-
-$(P_NAME): $(NAME) $(MAIN)
-	$(CC) $(CFLAGS) $(MAIN) $(NAME) -o $(P_NAME)
+$(TEST_BIN): $(NAME) $(TEST_MAIN)
+	$(CC) $(CFLAGS) -I. $(TEST_FILES) $(NAME) -o $(TEST_BIN)
 
 clean:
-	rm *.o
+	rm -f $(OBJS)
 	
-fclean:
-	rm *.o | rm $(NAME)
+fclean: clean
+	rm -f $(NAME)
 	
-tclean: fclean
-	rm $(P_NAME)
-	
-re: fclean make
+re: fclean all
 
-.PHONY: all clean fclean test tclean re
+.PHONY: all clean fclean re test
