@@ -3,15 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: alejandro <alejandro@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 05:57:10 by alex              #+#    #+#             */
-/*   Updated: 2024/12/11 04:54:35 by alex             ###   ########.fr       */
+/*   Updated: 2026/05/28 10:22:28 by alejandro        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * @brief Print a signed integer in decimal.
+ * @param n Value to print.
+ * @param count Current number of characters written.
+ * @return Updated character count after printing.
+ */
 int	ft_putnbr_c(int n, int count)
 {
 	long long	aux;
@@ -32,6 +38,14 @@ int	ft_putnbr_c(int n, int count)
 	return (count);
 }
 
+/**
+ * @brief Print an unsigned integer in the given base.
+ * @param unbr Value to print.
+ * @param base Base size (e.g., 10 or 16).
+ * @param count Current number of characters written.
+ * @param f Uppercase flag for hex digits.
+ * @return Updated character count after printing.
+ */
 int	ft_putunbr_base_c(unsigned int unbr, unsigned int base, int count, char f)
 {
 	if (unbr >= base)
@@ -44,6 +58,11 @@ int	ft_putunbr_base_c(unsigned int unbr, unsigned int base, int count, char f)
 	return (count);
 }
 
+/**
+ * @brief Print a pointer address in hexadecimal with 0x prefix.
+ * @param n Address value to print.
+ * @return Number of characters written.
+ */
 int	ft_putadress_c(unsigned long n)
 {
 	int	count;
@@ -59,6 +78,14 @@ int	ft_putadress_c(unsigned long n)
 	return (count + 2);
 }
 
+/**
+ * @brief Print an unsigned long in the given base.
+ * @param n Value to print.
+ * @param base Base size (e.g., 10 or 16).
+ * @param count Current number of characters written.
+ * @param f Uppercase flag for hex digits.
+ * @return Updated character count after printing.
+ */
 int	ft_put_ulong_base_c(unsigned long n, unsigned long base, int count, char f)
 
 {
@@ -72,6 +99,11 @@ int	ft_put_ulong_base_c(unsigned long n, unsigned long base, int count, char f)
 	return (count);
 }
 
+/**
+ * @brief Compute the length of a null-terminated string.
+ * @param s String to measure.
+ * @return Number of characters before the null terminator.
+ */
 int	ft_strlen_c(const char *s)
 {
 	int	n;

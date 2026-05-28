@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alcarril <alcarril@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alejandro <alejandro@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 18:21:38 by alex              #+#    #+#             */
-/*   Updated: 2024/12/12 20:03:15 by alcarril         ###   ########.fr       */
+/*   Updated: 2026/05/28 10:22:28 by alejandro        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * @brief Print formatted output to stdout.
+ * @param format Format string with printf-style specifiers.
+ * @return Total number of characters written, or -1 on trailing '%'.
+ */
 int	ft_printf(char const *format, ...)
 {
 	va_list	arguments;
@@ -40,6 +45,13 @@ int	ft_printf(char const *format, ...)
 	return (count);
 }
 
+/**
+ * @brief Handle one format specifier and update the total count.
+ * @param type Format specifier character.
+ * @param arguments Active variadic argument list.
+ * @param count Current number of characters written.
+ * @return Updated character count after printing the specifier.
+ */
 int	ft_select_cases(char type, va_list arguments, int count)
 {
 	if (type == 'c')
@@ -64,6 +76,11 @@ int	ft_select_cases(char type, va_list arguments, int count)
 	return (count);
 }
 
+/**
+ * @brief Write a single character to stdout.
+ * @param c Character to print (converted to unsigned char).
+ * @return Number of characters written (always 1).
+ */
 int	ft_putchar_c(int c)
 {
 	c = (unsigned char)c;
@@ -71,6 +88,11 @@ int	ft_putchar_c(int c)
 	return (1);
 }
 
+/**
+ * @brief Write a string to stdout, or "(null)" if the pointer is NULL.
+ * @param string Null-terminated string to print.
+ * @return Number of characters written.
+ */
 int	ft_putstr_c(char *string)
 {
 	int	count;
@@ -85,6 +107,14 @@ int	ft_putstr_c(char *string)
 	return (count);
 }
 
+/**
+ * @brief Write a single digit using the given base and case flag.
+ * @param element Digit alphabet (lowercase by default).
+ * @param base Base size (e.g., 10 or 16).
+ * @param n Digit value to print.
+ * @param f Uppercase flag for hex digits.
+ * @return Number of characters written (always 1).
+ */
 int	ft_putchar_base_c(char *element, unsigned int base, unsigned int n, char f)
 {
 	char	aux;
