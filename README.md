@@ -10,16 +10,14 @@ ft_printf
 	<img src="https://img.shields.io/badge/GNU-Makefile-green" alt="GNU Makefile" />
 </div>
 
-## Overview
-This project is a 42 school assignment to recreate the `printf` function and some of its parsing and expansion (formatting) cases. To build it, we use variadic functions, `malloc`, `free`, and the `write` function from the C standard library. We can also rely on our own library created in the Libft project.
+## 📌 Overview
+This project is my third 42 school assignment to recreate the `printf` function and some of its parsing and expansion (formatting) cases. To build it, I use variadic functions, my own library from the Libft project, and the standard C functions `malloc`, `free`, and `write`.
 
 ## Key Features
-- Parsing and formatting strings based on delimiter characters, in this case `%`, to understand how `printf` works.
-- Use of variadic functions and their handling.
-- Understanding that behind the scenes they are `void *`-like data accessed by casting according to the cases encountered.
-- Learning how to manage them and apply base conversions.
-- Understanding numeric bases, base conversions, how numbers are composed, and low-level bit operations in C.
-- Understanding C data types, their sizes, and numeric types.
+- Variadic function handling and safe casting for each format case.
+- Parsing and formatting strings using `%` as the delimiter.
+- Base conversions (decimal/hex) and numeric representation in C.
+- Understanding C data types, their sizes, and low-level bit operations.
 
 ## Formatted Cases
 We replicate the formatting cases used by `printf`:
@@ -32,7 +30,7 @@ We replicate the formatting cases used by `printf`:
 - `X` for hexadecimal (uppercase).
 - `%%` for a literal percent sign.
 
-## Requirements
+## 🛠️ Requirements
 Install required packages (Ubuntu/Debian):
 ```bash
 sudo apt update
@@ -44,7 +42,7 @@ Libft is included in this project (my own library), no extra install needed.
 
 Note: On other Linux or Unix-like systems, install GCC/Clang and GNU Make with your package manager.
 
-## Build
+## 🧱 Build
 ```bash
 git clone <your-repo-url>
 cd printf
@@ -52,7 +50,7 @@ make
 ```
 This builds the static library for handling `printf`.
 
-## Run
+## ▶️ Run
 Example `main.c`:
 ```c
 #include "ft_printf.h"
