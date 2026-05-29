@@ -16,6 +16,8 @@ ft_printf
 	</a>
 </div>
 
+![ft_printf](img/printf.png)
+
 ## Overview
 This project is my third 42 school assignment to recreate the `printf` function and some of its parsing and expansion (formatting) cases. To build it, I use variadic functions, my own library from the Libft project, and the standard C functions `malloc`, `free`, and `write`.
 
